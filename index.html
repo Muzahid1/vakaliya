@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vakaliya feed</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="navbar">
+        <a href="#default" id="logo">vakaliya feed</a>
+        <button onclick="nav()" id="nav">&#9776;</button>
+        <div id="navbar-right">
+            <div id="ho"></div>
+            <a  class="active" href="#ho">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#contr">About</a>
+        </div>
+    </div>
+    <a href="#hom"><button id="home">	&uarr;</button></a>
+
+    <div class="container">
+        <div id="hom"></div>
+        <center>
+            <div class="card">
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="animat2 fade">
+
+                                <img width="100%" src="./feed front.jpg">
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="animat2 fade">
+                               <center> <img style="width: 100%;" src="./feed rear.jpg"></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <h1 class="animat2">vakaliya feed</h1>
+                </center>
+            </div>
+        </center>
+        
+        
+        <div class="fade-in">
+            <h2>vakaliya feed</h2>
+        </div>
+        <div class="fade-in">
+            <h3>authorized distributor of godrej agrovet ltd</h3>
+        </div>
+        <center>
+            <div class="product">
+            <div >
+                <div>
+                    <h1>PRODUCT AND SERVICE</h1> <br>
+                    <div class="fader"><h2>poultry feed & boiler feed</h2></div>
+                    <div class="fader ab">starter</div>
+                    <div class="fader ab">grover</div>
+                    <div class="fader ab">developer</div>
+                    <div class="fader ab">phase 1</div>
+                    <div class="fader ab">phase 2</div>
+                    <div class="fader ab">phase 3</div>
+                </div>
+            </div>
+        </center>
+    </div>
+    <br>
+    <br>
+    <center>
+        <div class="fade">
+            <h2>60% + market</h2>
+        </div>
+        <div class="fade">
+            <h2>99.99% pure product</h2>
+        </div>
+    </center>
+    <center>
+        <div style="box-shadow: none;" class="fader">
+            <img  width="80%" src="./egg.png">
+        </div>
+        <div style="box-shadow: none; margin-left: 50px;" class="fader">
+            <img width="80%" src="./chiken.png">
+        </div>
+    </center>
+    <div id="contact">
+        <br>
+        <br>
+        <br>
+        <img style="width: 100%; height: 100%;" src="./banner.jpg">
+    </div>
+    <div class="footer">
+        <p>HushenBhai vakaliya</p> &nbsp;
+        <a href="tel:8780984929">call 8780984923</a>
+        <p>ismailBhai vakaliya</p>&nbsp;
+        <a href="tel:8780984929">call 8780984923</a>
+        <p>&copy; Vakaliya feed All right reserved</p>&nbsp;
+        
+        <a href="https://www.instagram.com/mr.muzu_04/"> &nbsp;&nbsp;
+             <p>Designed and developed by Muzahid vakaliya</p>
+        </a>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    $(window).on("load", function () {
+        $(window).scroll(function () {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $(".fade").each(function () {
+                /* Check the location of each desired element */
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                /* If the element is completely within bounds of the window, fade it in */
+                if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                    if ($(this).css("opacity") == 0) { $(this).fadeTo(900, 1); }
+                } else { //object goes out of view (scrolling up)
+                    if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+                }
+            });
+        }).scroll(); //invoke scroll-handler on page-load
+    });
+
+    $(window).on("load", function () {
+    $(window).scroll(function () {
+      var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+      $(".fader").each(function () {
+        /* Check the location of each desired element */
+        var objectBottom1 = $(this).offset().top + $(this).outerHeight();
+
+        /* If the element is completely within bounds of the window, fade it in */
+        if (objectBottom1 < windowBottom) { //object comes into view (scrolling down)
+          if ($(this).css("opacity") == 0) { $(this).fadeTo(1000, 1); }
+        } else { //object goes out of view (scrolling up)
+          if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+        }
+      });
+    }).scroll(); //invoke scroll-handler on page-load
+  });
+
+    // text fade in 
+    $(document).ready(function () {
+        $(window).on("scroll", function () {
+            var scroll_pos = $(window).scrollTop() + $(this).innerHeight();
+            var element_pos = $(".fade-in").offset().top;
+            // if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            //     if ($(this).css("opacity") == 0) { $(this).fadeTo(1000, 1); }
+            // } else { //object goes out of view (scrolling up)
+            //     if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+            // }
+
+            if (scroll_pos >= element_pos) {
+                $(".fade-in").addClass("fade-in-right");
+            }
+        });
+    });
+</script>
