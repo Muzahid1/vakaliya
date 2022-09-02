@@ -94,23 +94,31 @@ body {
 }
 
 .ab {
-  height: 20px;
-  width: 200px;
-  background-color: #e7f0e9b9;
+  
   border-radius: 8px;
   margin: 5px;
+}
+.fader.ab img:hover {
+     background-color: rgb(245, 238, 238);
+     transform: translateY(-25px);
+     box-shadow: 0 30px 30px rgb(0 0 0 / 26%);
+     transition: .3s ease transform,.3s ease box-shadow;
+}
+.fader.ab img {
+  transition: .3s ease transform,.3s ease box-shadow;
+ 
 }
 
 .fader {
   margin: 10px;
   padding: 5px;
-  box-shadow: -1px 4px 4px 4px rgba(47, 255, 0, 0.15);
+  /* box-shadow: -1px 4px 4px 4px rgba(47, 255, 0, 0.15); */
   border-radius: 5px;
   opacity: 1;
 }
 
 .product {
-  background-color: #a7aba040;
+  background-color: #fff;
   padding: 25px;
 }
 
